@@ -2,13 +2,16 @@
 
 echo "Setting up dotfiles"
 
+sudo apt-get update
+sudo apt install software-properties-common
+
 ## add bits needed for GitHub CLI
-apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-apt-add-repository https://cli.github.com/packages
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
 
 ## update and install some things we should probably have
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
   curl \
   gh \
   git \
